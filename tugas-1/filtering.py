@@ -26,27 +26,40 @@ if len(img.shape) == 3 :
 image , new_image = filter_image(img, np.array([[1,1,1],[1,1,1],[1,1,1]]))
 new_image , new_image_2 = filter_image(new_image, np.array([[1,1,1],[1,1,1],[1,1,1]]))
 new_image_2, new_image_3 = filter_image(new_image_2, np.array([[1,1,1],[1,1,1],[1,1,1]]))
+new_image_3, new_image_4 = filter_image(new_image_3, np.array([[1,1,1],[1,1,1],[1,1,1]]))
+new_image_4, new_image_5 = filter_image(new_image_4, np.array([[1,1,1],[1,1,1],[1,1,1]]))
 
 fig = plt.figure(figsize=(17,13))
 
-fig.add_subplot(221)
+fig.add_subplot(231)
 plt.imshow(image)
 plt.title('original image')
 plt.set_cmap('gray')
 
-fig.add_subplot(222)
+fig.add_subplot(232)
 plt.imshow(new_image)
 plt.title('blur image x1')
 plt.set_cmap('gray')
 
-fig.add_subplot(223)
+fig.add_subplot(233)
 plt.imshow(new_image_2)
 plt.title('blur image x2')
 plt.set_cmap('gray')
 
-fig.add_subplot(224)
+fig.add_subplot(234)
 plt.imshow(new_image_3)
 plt.title('blur image x3')
+plt.set_cmap('gray')
+
+fig.add_subplot(235)
+plt.imshow(new_image_4)
+plt.title('blur image x4')
+plt.set_cmap('gray')
+
+fig.add_subplot(236)
+plt.imshow(new_image_5)
+
+plt.title('blur image x5')
 plt.set_cmap('gray')
 
 plt.show()
